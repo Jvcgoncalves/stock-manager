@@ -1,0 +1,16 @@
+@media (max-width: 1024px){
+  .swiper{
+    width: 100%;
+    overflow-x: hidden;
+    padding:0 5rem 2rem 5rem;
+    .swiper-wrapper{
+      width:100%;
+      .swiper-slide{
+        width: 100%;
+        background-color: #171718;
+        height: 10rem;
+      }
+    }
+  }
+
+}

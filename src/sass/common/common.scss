@@ -1,0 +1,53 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#App{
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.container-fluid{
+  max-width: 90%;
+  padding: 0;
+}
+
+.header{
+  max-width: 100%;
+  height: 4.5rem;
+  position: relative;
+  padding: 0;
+  h1{
+    cursor: default;
+  }
+  .nav-link{
+    font-size: 1.15rem;
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      background-color: #e6e6e6;
+      width: 0;
+      height: .15rem;
+      left: 0;
+      bottom: .4rem;
+      transition: .35s ease-in-out;
+    }
+    &:hover::after{
+      width: 100%;
+    }
+  }
+
+  &::after{
+    content: "";
+      position: absolute;
+      background-color: #d4d4d4;
+      width: 100%;
+      height: .05rem;
+      bottom: 0rem;
+      transition: .35s ease-in-out;
+  }
+}

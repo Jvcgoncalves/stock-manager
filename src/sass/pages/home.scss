@@ -1,0 +1,17 @@
+.container{
+  .swiper{
+    width: 100%;
+    overflow-x: hidden;
+    .swiper-wrapper{
+      width:100%;
+      .swiper-slide{
+        width: 100%;
+        background-color: $dark-bg-black;
+        height: 10rem;
+      }
+    }
+  }
+  .itens-actions{
+    background-color: $dark-bg-black;
+  }
+}

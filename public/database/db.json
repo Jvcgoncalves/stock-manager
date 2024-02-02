@@ -1,0 +1,12 @@
+{
+  "products":[
+    {
+      "name":"feijão",
+      "quantity": 1,
+      "price": 520,
+      "description":"dsadasda",
+      "category": "a",
+      "id":1
+    }
+  ]
+}
