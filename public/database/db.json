@@ -1,12 +1,14 @@
 {
-  "products":[
+  "products": [
     {
-      "name":"feijão",
-      "quantity": 1,
-      "price": 520,
-      "description":"dsadasda",
-      "category": "a",
-      "id":1
+      "id": "PUm6D7nQWsswkJGCDF",
+      "name": "dasdasdas",
+      "quantity": "3213213",
+      "price": "12313213",
+      "category": "Bebidas",
+      "description": "dasdasdasds",
+      "registe_date": "05/02/2024",
+      "upload_dates": []
     }
   ]
 }

@@ -10,10 +10,10 @@ export default function Header(){
         <nav className="navbar">
           <ul className="navbar-nav d-flex flex-row gap-3">
             <li className="nav-item">
-              <Link className="nav-link text-white">Início</Link>
+              <Link to={"/"} className="nav-link text-white">Início</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white">Itens</Link>
+              <Link to={"/stock"} className="nav-link text-white">Itens</Link>
             </li>
           </ul>
         </nav>

@@ -1,0 +1,27 @@
+.container{
+  .stock-navbar{
+    .active{
+      position: relative;
+      &::after{
+        position: absolute;
+        bottom: .6rem;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: .1rem;
+        background-color: #e6e6e6;
+      }
+    }
+  }
+  .products-header{
+    background-color: $dark-bg-black;
+  }
+  .products-body{
+    .btn.btn-primary{
+      transition: .3s ease-in-out;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
