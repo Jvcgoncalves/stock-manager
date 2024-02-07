@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { sendToBackEnd } from "../../../scripts/sendToBackEnd";
 import Button from "../../../components/Button";
+import UserProducts from "../../../contexts/userProducts";
 
 export default function AddProduct(){
+  const {allUserProducts,setAllUserProducts} = useContext(UserProducts)
   const [formData, setFormData] = useState({
     name:"",
     quantity:"",
@@ -23,20 +25,20 @@ export default function AddProduct(){
     <div className="add-product-page">
       <form 
         onSubmit={ev => {
-            ev.preventDefault()
-            sendToBackEnd(formData)
-            setFormData({
-              name:"",
-              quantity:"",
-              price:"",
-              category:"",
-              description:""
-            })
-          }}
+          ev.preventDefault()
+          sendToBackEnd(formData,setAllUserProducts)
+          setFormData({
+            name:"",
+            quantity:"",
+            price:"",
+            category:"",
+            description:""
+          })
+        }}
       >
         <div className="row my-2">
           <div className="col-3">
-            <label className="fs-5" htmlFor="name">Nome</label>
+            <label className="fs-5 form-label" htmlFor="name">Nome</label>
             <input
             autoComplete="off"
             value={formData.name} 
@@ -48,7 +50,7 @@ export default function AddProduct(){
             />
           </div> {/* Name div end */}
           <div className="col-3">
-            <label className="fs-5" htmlFor="quantity">Quantidade</label>
+            <label className="fs-5 form-label" htmlFor="quantity">Quantidade</label>
             <input
             min={0}
             autoComplete="off"
@@ -61,7 +63,7 @@ export default function AddProduct(){
             />
           </div> {/* Quantity div end */}
           <div className="col-3">
-            <label className="fs-5" htmlFor="price">Preço</label>
+            <label className="fs-5 form-label" htmlFor="price">Preço</label>
             <input
             autoComplete="off"
             min={0}
@@ -70,11 +72,12 @@ export default function AddProduct(){
             required
             id="price" 
             type="number"
+            step="0.01"
             className="form-control text-white" 
             />
           </div> {/* Price div end */}
           <div className="col-3">
-            <label className="fs-5" htmlFor="category">Categoria</label>
+            <label className="fs-5 form-label" htmlFor="category">Categoria</label>
             <select 
               value={formData.category} 
               onChange={ev => handleChange(ev.currentTarget)} 
@@ -97,7 +100,7 @@ export default function AddProduct(){
         </div>
         <div className="row my-2">
           <div className="col-12">
-            <label className="fs-5" htmlFor="description">Descrição</label>
+            <label className="fs-5 form-label" htmlFor="description">Descrição</label>
             <textarea 
               onChange={ev => handleChange(ev.currentTarget)} 
               required

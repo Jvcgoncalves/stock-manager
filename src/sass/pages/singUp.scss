@@ -1,0 +1,30 @@
+.container.sing-up-page{
+  .sing-up-form{
+    background-color: $form-background;
+    color: $dark-bg-black;
+    box-shadow: 0 0 1rem 1rem $dark-bg-black;
+
+    #reset-password{
+      background-color: transparent;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    #password{
+      padding-right: 10%;
+    }
+    .password-div{
+      div{
+        right: .2rem;
+        bottom: -.4rem;
+        height: min-content;
+        width: min-content;
+        cursor: pointer;
+        i{
+          color: $dark-bg-black;
+          font-size: 2.25rem;
+        }
+      }
+    }
+  }
+}

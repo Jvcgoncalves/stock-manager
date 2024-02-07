@@ -1,21 +1,18 @@
-import Button from "../Button";
+import { Link } from "react-router-dom";
 
-export default function ItemsBlock({name}){
+export default function ItemsBlock({name,productId}){
   return (
     <div className="row p-3">
       <span className="col-7">
         {name}
       </span>
       <div className="col-5">
-        <Button
-        atributes={
-          {
-            className:"btn btn-primary border-0 text-bg-light",
-          }
-        }
+        <Link
+          to={`stock/product/${productId}`}
+          className="btn btn-primary border-0 text-bg-light"
         >
           Ver
-        </Button>
+        </Link>
       </div>            
     </div>
   )

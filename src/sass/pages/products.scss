@@ -9,13 +9,11 @@
         content: "";
         width: 100%;
         height: .1rem;
-        background-color: #e6e6e6;
+        background-color: $line-after-color;
       }
     }
   }
-  .products-header{
-    background-color: $dark-bg-black;
-  }
+
   .products-body{
     .btn.btn-primary{
       transition: .3s ease-in-out;

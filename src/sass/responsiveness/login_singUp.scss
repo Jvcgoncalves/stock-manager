@@ -1,0 +1,162 @@
+@media (min-width:1440px) {
+  .container.login-page,.container.sing-up-page{  
+    .login-form,.sing-up-form{
+      background-color: $form-background;
+      color: $dark-bg-black;
+      box-shadow: 0 0 1rem 1rem $dark-bg-black;
+  
+      #reset-password{
+        background-color: transparent;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      #password{
+        padding-right: 10%;
+      }
+      .btn{
+        font-size: 1.5rem !important;
+      }
+      .form-label{
+        font-size: 1.5rem !important;
+      }
+      .form-control{
+        font-size: 1.5rem;
+      }
+      #reset-password,.cancel-sing-up {
+        font-size: 1.5rem !important;
+      }
+      .password-div{
+        div.position-absolute{
+          right: .5rem;
+          i{
+            color: $dark-bg-black;
+            font-size: 2.75rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1024px) {
+  .container.login-page,.container.sing-up-page{  
+    .login-form,.sing-up-form{
+      background-color: $form-background;
+      color: $dark-bg-black;
+      box-shadow: 0 0 1rem 1rem $dark-bg-black;
+  
+      #reset-password{
+        background-color: transparent;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      #password{
+        padding-right: 12%;
+      }
+      .btn{
+        font-size: 1.1rem !important;
+      }
+      .form-label{
+        font-size: 1.1rem !important;
+      }
+      .form-control{
+        font-size: 1.1rem;
+      }
+      #reset-password,.cancel-sing-up {
+        font-size: 1.1rem !important;
+      }
+      .password-div{
+        div.position-absolute{
+          right: .5rem;
+          i{
+            color: $dark-bg-black;
+            font-size: 2.25rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .container.login-page,.container.sing-up-page{  
+    .login-form,.sing-up-form{
+      width: 75% !important;
+    }
+  }
+}
+
+@media (max-width:425px) {
+  .container.login-page,.container.sing-up-page{  
+    .login-form,.sing-up-form{
+      width: 75% !important;
+      background-color: $form-background;
+      color: $dark-bg-black;
+      box-shadow: 0 0 1rem 1rem $dark-bg-black;
+      #password{
+        padding-right: 15%;
+      }
+      .btn{
+        font-size: .9rem !important;
+      }
+      .form-label{
+        font-size: .9rem !important;
+      }
+      .form-control{
+        font-size: .9rem;
+      }
+      #reset-password,.cancel-sing-up {
+        font-size: .9rem !important;
+      }
+      .password-div{
+        div.position-absolute{
+          right: .25rem;
+          bottom: 0rem;
+          i{
+            color: $dark-bg-black;
+            font-size: 1.5rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:350px) {
+  .container.login-page,.container.sing-up-page{  
+    .login-form,.sing-up-form{
+      width: 90% !important;
+      margin: 0 1rem !important;
+      background-color: $form-background;
+      color: $dark-bg-black;
+      box-shadow: 0 0 1rem 1rem $dark-bg-black;
+      #password{
+        padding-right: 15%;
+      }
+      .btn{
+        font-size: .9rem !important;
+      }
+      .form-label{
+        font-size: .9rem !important;
+      }
+      .form-control{
+        font-size: .9rem;
+      }
+      #reset-password,.cancel-sing-up {
+        font-size: .9rem !important;
+      }
+      .password-div{
+        div.position-absolute{
+          right: .25rem;
+          bottom: 0rem;
+          i{
+            color: $dark-bg-black;
+            font-size: 1.5rem !important;
+          }
+        }
+      }
+    }
+  }
+}

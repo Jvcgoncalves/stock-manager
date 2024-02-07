@@ -1,0 +1,117 @@
+@media (min-width:1440px){
+  .container{
+    h2.h2{
+      font-size: 2.75rem;
+    }
+    .stock-navbar{
+      font-size: 1.5rem;
+      .active{
+        &::after{
+          bottom: .5rem;          
+          height: .2rem;
+        }
+      }
+    }
+  
+    .products-body,.products-header{
+      span,.btn.btn-primary{
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container{
+    h2.h2{
+      font-size: 1.75rem;
+    }
+    .stock-navbar{
+      .active{
+        position: relative;
+        &::after{
+          position: absolute;
+          bottom: .6rem;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: .1rem;
+          background-color: $line-after-color;
+        }
+      }
+    }
+  
+    .products-body,.products-header{
+      span.col-2,span.col-1{
+        display: none;
+      }
+      span.col-3{
+        width: 50%;
+        margin: 0 !important;
+        padding: 0 .1rem;
+      }
+      div.action-buttons{
+        width: 50%;
+        margin: 0 !important;
+        padding: 0 .1rem !important;
+      }
+      .btn.btn-primary{
+        transition: .3s ease-in-out;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 580px) {
+  .container{
+
+    .products-body,.products-header{
+      span.col-3{
+        width: 50%;
+        margin: 0 !important;
+        padding: 0 .1rem;
+        font-size: .9rem;
+      }
+      div.action-buttons{
+        width: 50%;
+        margin: 0 !important;
+        padding: 0 .1rem !important;
+        gap: .3rem !important;
+      }
+      .btn.btn-primary{
+        transition: .3s ease-in-out;
+        font-size: .9rem;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .container{
+    .products-body,.products-header{
+      span.col-3{
+        width: 50%;
+        padding: 0 .1rem;
+        font-size: .9rem;
+        word-wrap: break-word;
+      }
+      div.action-buttons{
+        width: 50%;
+        gap: .3rem !important;
+        flex-direction: column;
+      }
+      .btn.btn-primary{
+        transition: .3s ease-in-out;
+        font-size: .9rem;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

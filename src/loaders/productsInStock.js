@@ -1,5 +1,11 @@
-export default async function homeLoader(){
-  const response = await fetch('http://localhost:3001/products').then(res => res.json())
+import { doc, getDoc } from "firebase/firestore";
+import { dataBase } from "../scripts/firebaseAuth";
 
-  return response
+export default async function productsInStock({params}){
+  try {
+    const {userUid} = params
+    return userUid
+  } catch (error) {
+    throw new Error("Server error")
+  }
 }

@@ -11,8 +11,14 @@
 @import "./pages/home.scss";
 @import "./pages/products.scss";
 @import "./pages/addProductPage.scss";
+@import "./pages/login.scss";
+@import "./pages/singUp.scss";
 
 // Responsive pages
 
 @import "./responsiveness/home.scss";
-
+@import "./responsiveness/addProduct.scss";
+@import "./responsiveness/common.scss";
+@import "./responsiveness/login_singUp.scss";
+@import "./responsiveness/products.scss";
+@import "./responsiveness/singleProduct.scss";

@@ -1,0 +1,36 @@
+@media (min-width:1440px) {
+  .add-product-page{
+    .row{
+      .form-label{
+        font-size: 1.5rem !important;
+      }
+    }
+    .form-control,.form-select{
+      background-color: $dark-bg-black;
+      font-size: 1.5rem;
+    }
+    .form-select option{
+      font-size: 1rem;
+      max-width: 10rem;
+    }
+    div.d-flex{
+      .btn{
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+@media (max-width:680px) {
+  .add-product-page{
+    .row{
+      flex-direction: column;
+      gap: 1rem;
+      div{
+        width: 100%;
+      }
+    }
+    .form-control,.form-select{
+      background-color: $dark-bg-black;
+    }
+  }
+}
