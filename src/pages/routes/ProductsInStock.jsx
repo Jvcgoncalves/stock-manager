@@ -15,7 +15,7 @@ export function changeActiveNavLink(ev){
 export default function ProductsInStock(){
 
   const userUid = useContext(UserId)
-  
+
   return (
     <div className="container" >
       <h2 className="text-white h2">

@@ -4,6 +4,7 @@ export default function Home_ProductsInStock_boundary(){
   const error = useRouteError()
 
   if(isRouteErrorResponse(error)){
+
     switch(error.status){
       case 404:
         return <h2>Nenhum produto encontrado</h2>
@@ -17,5 +18,5 @@ export default function Home_ProductsInStock_boundary(){
         return <h2>Erro na resposta</h2>
     }
   }
-  return <h3>Problemas no servidor</h3>
+  return <h3>Problemas no servidor, tente reiniciar seu login</h3>
 }

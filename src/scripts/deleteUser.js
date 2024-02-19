@@ -7,7 +7,6 @@ export default async function deleteUserFromDataBase(){
     const docRef = doc(dataBase,"users",auth.currentUser.uid)
     await deleteDoc(docRef).then(async ()=> await deleteUser(auth.currentUser)).then(()=> alert("Usuário removido com sucesso"))
   } catch (error){
-    console.log(error);
     throw new Error("Can't remove user")
   }
 }

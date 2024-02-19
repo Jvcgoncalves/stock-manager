@@ -15,9 +15,12 @@ import userSingInIdLoader from "../loaders/userSingInLoader";
 import DefaultLayoutBondarie from "../error-bounderies/DefaultLayoutError";
 import SingleProductBoundary from "../error-bounderies/SingleProductBoundary";
 import EditProduct from "./routes/ProductsInStockChildren/EditProduct";
-import Header from "../components/header";
 
 const routes = createBrowserRouter([
+  {
+    path: "*",
+    element: <Login />,
+  },
   {
     path:"/",
     element: <Login />,
@@ -34,7 +37,6 @@ const routes = createBrowserRouter([
     loader: userSingInIdLoader,
     errorElement: 
     <div id="App" className="bg-dark">
-      <Header />
       <main className="container-fluid">
         <div className="container text-white">
           <DefaultLayoutBondarie /> 
@@ -63,19 +65,19 @@ const routes = createBrowserRouter([
       {
         path:"/user/:userUid/stock",
         element: <ProductsInStock />,
-        loader: productsInStock,
         errorElement:
         <div className="container">
           <Home_ProductsInStock_boundary />
-        </div>,
+        </div>, 
         children:[
           {
             index:true,
             element: <AllItems />,
+            loader:productsInStock,
             errorElement: 
               <div className="container">
                 <Home_ProductsInStock_boundary />
-              </div>,
+              </div>, // allProducts
           },
           {
             path:"/user/:userUid/stock/addItem",

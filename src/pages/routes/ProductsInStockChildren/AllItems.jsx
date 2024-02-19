@@ -1,12 +1,32 @@
-import { Link } from "react-router-dom"
-import Button from "../../../components/Button";
-import removeFromBackEnd from "../../../scripts/removeProduct";
-import { useContext} from "react";
-import UserProducts from "../../../contexts/userProducts";
-import getCategory from "../../../scripts/translateCategory";
+import { useEffect, useRef, useState} from "react";
+import ProducBlock from "../../../components/Products/ProductBlock";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../../scripts/firebaseAuth";
+import { productService } from "../../../scripts/services/products-services";
+import Loader from "../../../components/common/Loader";
 
 export default function AllItems(){
-  const {allUserProducts,setAllUserProducts} = useContext(UserProducts)
+  const [allUserProducts,setAllUserProducts] = useState(null)
+  const fetchDataCalledRef = useRef(false)
+  
+  useEffect(() => {
+    const fetchData = async () =>{
+      onAuthStateChanged(auth,async user =>{
+        if(!user){
+          setAllUserProducts("error")
+          return <h2>Nenhum usuário logado</h2>
+        } else{
+          const {getProductData} = productService
+          setAllUserProducts(await getProductData())
+        }
+      })
+    }
+    
+    if (!fetchDataCalledRef.current) {
+      fetchData();
+      fetchDataCalledRef.current = true
+    }
+  }, []);
 
   return(
     <div className="products-table d-flex flex-column mt-4">
@@ -31,6 +51,11 @@ export default function AllItems(){
       </div>
       <div className="products-body d-flex flex-column gap-3 px-3 mt-3">
         {
+          allUserProducts === null ?
+          (
+            <Loader />
+          )
+          :
           allUserProducts.length === 0 ?
           (
             <span className="fs-5 text-center">
@@ -41,37 +66,15 @@ export default function AllItems(){
           (
             allUserProducts.map(product=>{
               return(
-                <div className="row" key={product.id}>
-                  <span className="col-3">{product.id}</span>
-                  <span className="col-2">{product.name}</span>
-                  <span className="col-2">{product.quantity}</span>
-                  <span className="col-1">{getCategory(product.category)}</span>
-                  <div className="action-buttons d-flex gap-3 col-auto ms-3">
-                    <Link to={`product/${product.id}`} 
-                    className="btn btn-primary bg-info border-0 text-dark"
-                    >
-                      Ver
-                    </Link>
-                    <Link
-                    to={`product/${product.id}/editProduct`}
-                    className="btn btn-primary text-bg-light border-0"
-                    >
-                      Atualizar
-                    </Link>
-                    <Button
-                    atributes={{
-                      className:"btn btn-primary bg-danger border-0",
-                      onClick:(() => {
-                        const filterProducts = allUserProducts.filter(currentProduct => currentProduct.id !== product.id)
-                        removeFromBackEnd(filterProducts)
-                        setAllUserProducts(filterProducts)
-                      })
-                    }}
-                    >
-                      Excluir
-                    </Button>
-                  </div>
-                </div>
+                <ProducBlock 
+                category={product.category}
+                id={product.id}
+                name={product.name}
+                quantity={product.quantity}
+                key={product.id}
+                setAllUserProducts={setAllUserProducts}
+                allUserProducts={allUserProducts}
+                />
               )
             })
           )

@@ -61,20 +61,3 @@ export default function DashboardBoxes({productsQuantity,kindsProducts,recentPro
     </Swiper>
   )
 }
-
-{/* <div className="swiper-slide d-flex flex-column">
-          <span>Diversidade de itens</span>
-          <span>1</span>
-        </div>
-        <div className="swiper-slide d-flex flex-column">
-          <span>Inventário total</span>
-          <span>1</span>
-        </div>
-        <div className="swiper-slide d-flex flex-column">
-          <span>Itens recentes</span>
-          <span>1</span>
-        </div>
-        <div className="swiper-slide d-flex flex-column">
-          <span>Itens acabando</span>
-          <span>1</span>
-        </div> */}

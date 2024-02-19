@@ -4,6 +4,7 @@ import {auth, dataBase} from "../../scripts/firebaseAuth"
 import { Link, useNavigate } from "react-router-dom";
 import showPassword from "../../scripts/showPassword";
 import { doc, setDoc } from "firebase/firestore";
+import toggleLoader from "../../scripts/hideLoader";
 
 export default function SingUp(){
   const sing_up_button = useRef(null)
@@ -20,6 +21,8 @@ export default function SingUp(){
 
   const singUp = async ev =>{
     ev.preventDefault()
+    toggleLoader()
+
     if(inputControl.password.length < 6) {
       setSingUpResponse("A senha deve ter pelo menos 6 caracteres") 
       return
@@ -39,11 +42,18 @@ export default function SingUp(){
       if(error.code === "auth/invalid-email") setSingUpResponse("Email inválido")
       else setSingUpResponse("Email já está em uso")
       console.clear()
-    })
+    }).finally(()=> toggleLoader())
   }
 
   return (
     <div id="App" className="bg-dark">
+      <>
+        <div className="loader d-flex align-items-center justify-content-center fs-6 hide" id="navigation-loader">
+          <div className="spinner-border text-white" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </>
       <div className="container py-5 sing-up-page d-grid">
         <form 
         className="text-white sing-up-form w-50 mx-auto p-4 rounded"

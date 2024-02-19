@@ -1,10 +1,10 @@
-import { useContext, useState } from "react"
-import { sendToBackEnd } from "../../../scripts/sendToBackEnd";
+import { useState } from "react"
 import Button from "../../../components/Button";
-import UserProducts from "../../../contexts/userProducts";
+import { productService } from "../../../scripts/services/products-services";
+import toggleLoader from "../../../scripts/hideLoader";
 
 export default function AddProduct(){
-  const {allUserProducts,setAllUserProducts} = useContext(UserProducts)
+  const {addProduct} = productService
   const [formData, setFormData] = useState({
     name:"",
     quantity:"",
@@ -24,9 +24,16 @@ export default function AddProduct(){
   return(
     <div className="add-product-page">
       <form 
-        onSubmit={ev => {
+        onSubmit={async ev => {
           ev.preventDefault()
-          sendToBackEnd(formData,setAllUserProducts)
+          toggleLoader()
+          const response = await addProduct(formData)
+
+          if(response.message === "Failed to fetch") {
+            alert("Erro interno não foi possível adicionar o produto")
+            toggleLoader()
+            return
+          }
           setFormData({
             name:"",
             quantity:"",
@@ -34,6 +41,7 @@ export default function AddProduct(){
             category:"",
             description:""
           })
+          toggleLoader()
         }}
       >
         <div className="row my-2">

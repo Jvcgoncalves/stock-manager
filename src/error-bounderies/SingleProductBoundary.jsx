@@ -2,6 +2,7 @@ import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 
 export default function SingleProductBoundary(){
   const error = useRouteError()
+
   if(isRouteErrorResponse(error)){
     switch(error.status){
       case 404:
@@ -16,5 +17,5 @@ export default function SingleProductBoundary(){
         return <h2>Erro na resposta</h2>
     }
   }
-  return <h3>Problemas no servidor</h3>
+  return <h3>Problemas no servidor, tente reiniciar seu login</h3>
 }

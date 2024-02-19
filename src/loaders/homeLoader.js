@@ -1,24 +1,17 @@
-import { doc, getDoc } from "firebase/firestore";
-import { dataBase } from "../scripts/firebaseAuth";
 import getCurrentDate from "../scripts/getProductRegisteDate";
 
 export default async function homeLoader({params}){
   try {
     let {userUid} = params ?? "no user"
-
-    const userRef = doc(dataBase,"users",userUid)
-
-    const userDoc = await getDoc(userRef);
-
-    const currentProducts = userDoc.data().products || [];
-    const productsRelations ={
-      endingProducts:getEndingProducts(currentProducts),
-      recentProducts:getRecentProducts(currentProducts),
-      kindsProducts:allKindsProducts(currentProducts),
-      productsQuantity:allProductsQuantity(currentProducts)
+    const productsRelationsFunction ={
+      getEndingProducts,
+      getRecentProducts,
+      allKindsProducts,
+      allProductsQuantity
     }
-    return {userUid, productsRelations}
+    return {userUid, productsRelationsFunction}
   } catch (error) {
+    console.log(error);
     throw new Error("Server error")
   }
 }
@@ -26,7 +19,7 @@ export default async function homeLoader({params}){
 function getEndingProducts(products){
   return products.filter(product=>product.quantity <=10)
 }
-//product.register_date.split('/')
+
 function getRecentProducts(products){
   return products.filter(product=>{
     const [currentDay,currentMonth,currentYear] = getCurrentDate().split("/")

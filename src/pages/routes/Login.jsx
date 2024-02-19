@@ -4,19 +4,20 @@ import Button from "../../components/Button";
 import {auth} from "../../scripts/firebaseAuth"
 import { Link, useNavigate } from "react-router-dom";
 import showPassword from "../../scripts/showPassword";
-
+import toggleLoader from "../../scripts/hideLoader";
 
 export default function Login(){
-
   const navigate = useNavigate()
   const password_input = useRef(null)
   const [inputControl,setInputControl] = useState({email:"",password:""})
   const [errorMessage,setErrorMessage] = useState("")
-
+  
   useEffect(()=>{
+    
     onAuthStateChanged(auth,(user)=>{
       if(window.location.pathname === "/singUp") return
       if(user){
+        toggleLoader()
         navigate(`/user/${user.uid}`)
       }
     })
@@ -47,6 +48,7 @@ export default function Login(){
   const singIn = ev =>{
     ev.preventDefault()
     signInWithEmailAndPassword(auth,inputControl.email,inputControl.password).then(userCredential =>{
+      toggleLoader()
       navigate(`/user/${userCredential.user.uid}`)
     }).catch(()=>{
       setErrorMessage("Credenciais não encontradas!")
@@ -56,6 +58,13 @@ export default function Login(){
 
   return (
     <div id="App" className="bg-dark">
+      <>
+        <div className="loader d-flex align-items-center justify-content-center fs-6 hide" id="navigation-loader">
+          <div className="spinner-border text-white" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </>
       <div className="container py-5 login-page d-grid ">
         <form 
         className="text-white login-form w-50 mx-auto p-4 rounded"

@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth/cordova";
+import { GoogleAuthProvider, getAuth, getRedirectResult, signInWithRedirect } from "firebase/auth/cordova";
 import { getFirestore } from "firebase/firestore";
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
   apiKey: "AIzaSyCu-88XrskG_5KRp-QX1ZS4b0QcdBq1Xf8",

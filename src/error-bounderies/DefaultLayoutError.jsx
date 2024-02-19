@@ -16,5 +16,5 @@ export default function DefaultLayoutBondarie(){
         return <h2>Erro na resposta</h2>
     }
   }
-  return <h3>Problemas no servidor</h3>
+  return <h3>Problemas no servidor, tente reiniciar seu login</h3>
 }
