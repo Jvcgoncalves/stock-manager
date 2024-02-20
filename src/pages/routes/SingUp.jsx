@@ -25,11 +25,12 @@ export default function SingUp(){
 
     if(inputControl.password.length < 6) {
       setSingUpResponse("A senha deve ter pelo menos 6 caracteres") 
+      toggleLoader()
       return
     }
     
     await createUserWithEmailAndPassword(auth,inputControl.email,inputControl.password).then(async () =>{
-      
+      toggleLoader()
       const userInfo = {
         products: [],
         userUid: auth.currentUser.uid
@@ -42,7 +43,8 @@ export default function SingUp(){
       if(error.code === "auth/invalid-email") setSingUpResponse("Email inválido")
       else setSingUpResponse("Email já está em uso")
       console.clear()
-    }).finally(()=> toggleLoader())
+    })
+    toggleLoader()
   }
 
   return (
