@@ -4,7 +4,7 @@
 Project about a stock store, you can add, delete, see and edit products, all of this based in your account that you can create with any email. Don't need to be a 
 real email, you can use a fake one just to sing in and enjoy the aplication.
 
-## - Techs
+## Techs
 
 - JavaScript ES6
 - ReactJS
