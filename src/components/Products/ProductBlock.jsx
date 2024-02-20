@@ -8,7 +8,7 @@ export default function ProducBlock({id,name,quantity,category,setAllUserProduct
   const {deleteProduct} = productService
 
   return(
-    <div className="row" key={id}>
+    <div className="row align-items-center" key={id}>
       <span className="col-3">{id}</span>
       <span className="col-2">{name}</span>
       <span className="col-2">{quantity}</span>
