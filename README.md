@@ -1,3 +1,4 @@
+![5166961](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/897f5f89-f37c-4400-bb07-a8e0054ea636)
 # Stock store
 
 Project about a stock store, you can add, delete, see and edit products, all of this based in your account that you can create with any email. Don't need to be a 
@@ -20,6 +21,17 @@ real email, you can use a fake one just to sing in and enjoy the aplication.
 - Firebase Auth
 - Firebase database
 
+## Features
+
+The features of the application are:
+
+- Save products
+- Delete products
+- See products
+- Update products
+- Manage products
+- Organize your items
+  
 ## How to use
 
 ### 1 - When you acess the hosting link you will see the form to sign in, if you never used this site before you need to click at "Registrar-se" (sign Up)
@@ -37,7 +49,7 @@ real email, you can use a fake one just to sing in and enjoy the aplication.
 
 ![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/16f8e420-330c-4ee2-95e7-3abdfb9cec49)
 
-#### 2.1 - on top you will see header with four options, "excluir conta" (delete account), "início" (home, page you see at beginning), "itens" (items) and "sair" (sign out)
+#### 2.1 - on top you will see header with four options, "excluir conta" (delete account), "início" (home, page you see at beginning), "itens" (items) and "sair" (log out)
 
 ![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/dcdb2d40-0400-46ff-ab31-f567b07309c6)
 
@@ -76,11 +88,61 @@ real email, you can use a fake one just to sing in and enjoy the aplication.
 ###### - Empty
 ![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/cc563892-e8a4-4822-981f-14eb76d084da)
 
-###### - With any items
+###### - With items
 ![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/b6f33941-1818-47b2-98bd-c929af6d9b9f)
+
+###### - With items at mobile
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/91da3358-03a8-469a-817e-690628ada3de)
 
 ##### 3.1.2 - "Novos itens" There you can add new item to your stock
 
 ![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/93c4c39f-a410-4241-b99b-4ded5956f781)
 
+#### 4 - Touch any of buttons with "Ver" (see)...
+###### - Buttons
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/ba87843d-6fa8-405f-8142-9e4cd3acbe20)
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/2eb63d79-590a-4035-a304-2153efbb9bec)
 
+#### 4 - ... You will be redirected to this page, there you has all product data
+
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/62531c3d-f3d2-456c-ac0d-f4404f41acf3)
+
+##### 4.1 - "Atualizado em" is update when you touch/click the button "Atualizar" (Update)
+
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/140e7562-543f-4d69-b329-7ae083d90058)
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/a3e790c9-e893-48c1-a082-aa80476a806b)
+
+##### 4.2 - In red you have a button to delete the product "Exluir" (delete), there is no confirmation, so if you touch/click will be deleted instantly
+
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/140e7562-543f-4d69-b329-7ae083d90058)
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/a3e790c9-e893-48c1-a082-aa80476a806b)
+
+#### 5 - Tap/click any of the update buttons, you will be redirected to this page which contains the data about the current product you are trying to update
+
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/0433d370-4be8-45ed-890f-d7c83dd4300a)
+
+##### 5.1 - Tap "cancelar" (cancel), cancel the update and return to previous page that you were on
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/886e52cc-cc82-43d6-bf79-c10124d7af3e)
+
+##### 5.2 - Tap "Salvar" (save), cancel the update and return to previous page that you were on
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/c94296e3-1825-4a4b-8203-d43ef5f297cf)
+
+#### 6 - Tap/click log out you will be redirected to sing in page
+
+## Links
+
+- Deploy on netlify: https://stock-storejvgc.netlify.app/
+- Repository: https://github.com/Jvcgoncalves/stock-manager
+- Backend files: https://github.com/Jvcgoncalves/stock-manager-backend
+  - In case of bugs or suggestions contact goncalvesdacosta05@gmail.com
+
+## Versioning
+
+1.0.0.0
+
+## Authors
+
+- **João Vitor Gonçalves da Costa**
+
+Please follow github and linkdin (link in my profile )!
+Thanks to visiting me and good coding!
