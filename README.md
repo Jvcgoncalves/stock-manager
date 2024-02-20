@@ -63,5 +63,24 @@ real email, you can use a fake one just to sing in and enjoy the aplication.
 
 ![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/2d7d8205-1489-490a-bc26-3da82caf52d2)
 
+### 3 - Clicking/touching on "itens" (items) you will be redirect to this page
+
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/3d112b21-b2fa-4a98-bf07-816505277662)
+
+#### 3.1 - Under "Itens em estoque" you will see the navigation menu 
+
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/65279f1a-705c-486d-8d98-c0a5b77efc4d)
+
+##### 3.1.1 - "Todos os itens" you will see all your stocked items
+
+###### - Empty
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/cc563892-e8a4-4822-981f-14eb76d084da)
+
+###### - With any items
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/b6f33941-1818-47b2-98bd-c929af6d9b9f)
+
+##### 3.1.2 - "Novos itens" There you can add new item to your stock
+
+![image](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/93c4c39f-a410-4241-b99b-4ded5956f781)
 
 
