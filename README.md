@@ -1,4 +1,4 @@
-<h3>**BACKEND REPOSITORY LINK AT END**</h3> 
+<h3>**BACKEND REPOSITORY LINK AT THE END**</h3> 
 
 ![5166961](https://github.com/Jvcgoncalves/stock-manager/assets/127047416/897f5f89-f37c-4400-bb07-a8e0054ea636)
 # Stock store
